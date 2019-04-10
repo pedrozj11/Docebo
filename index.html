@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accordion demo page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/accordion.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/accordion.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+    <h1>Accordion demo page</h1>
+    <div id="my-accordion"></div>
+    <script type="text/javascript">
+        var options = {
+            container: 'my-accordion',
+            mainTitle: 'Main accordion title',
+            panels: [{
+                title: 'My profile',
+                subtitle: 'Update your profile information',
+                content: '<p>HTML content for this panel</p>'
+            }, {
+                title: 'Change Password',
+                subtitle: 'Update your profile information',
+                content: '<p>HTML content for this panel</p>'
+                }
+            ]
+        };
+        var accordion = new Accordion(options); 
+    </script>
+</body>
+</html>
