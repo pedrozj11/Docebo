@@ -1,46 +1,59 @@
-.container {
-    width: 80%;
-    max-width: 600px;
-    margin: 50px auto;
-  }
-  
-  button.accordion {
-    width: 100%;
-    background-color: whitesmoke;
-    border: none;
-    outline: none;
-    text-align: left;
-    padding: 15px 20px;
-    font-size: 18px;
-    color: #444;
-    cursor: pointer;
-    transition: background-color 0.2s linear;
-  }
-  
-  button.accordion:after {
-    content: '\f078';
-    font-family: "fontawesome";
-    font-size: 14px;
-    float: right;
-    transition: all 300ms ease-in 0s;
-  }
-  
-  button.accordion.is-open:after {
-    content: '\f078';
-    transform: rotate(180deg);
-    transition: all 300ms ease-in 0s;
-  }
-  
-  button.accordion:hover, button.accordion.is-open {
-    background-color: #ddd;
-  }
-  
-  .accordion-content {
-    background-color: white;
-    border-left: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-  }
+#my-accordion {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+div.accordion {
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.titulos h3, div.titulos h4 {
+
+    margin: 6px 0px 6px 0px;
+}
+
+div.accordion i {
+  font-size: 14px;
+  // float: right;
+  transition: all 300ms ease-in 0s;
+}
+
+div.accordion.is-open i {
+  transform: rotate(180deg);
+  transition: all 300ms ease-in 0s;
+}
+
+div.accordion:hover,
+div.accordion.is-open {
+  background-color: #ddd;
+}
+
+.titulos {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}

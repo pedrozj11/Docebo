@@ -17,17 +17,35 @@ class Accordion {
     //create accordion
     this.options.panels.forEach(element => {
 
-        let panelTitle = document.createElement("button");
-        panelTitle.textContent = element.title;
-        panelTitle.classList.add('accordion');
-        accordion.appendChild(panelTitle);
+        let panelTitle = document.createElement("div");
 
-        let panel = document.createElement("div");
-        panel.classList.add('accordion-content');
+
+        let title = document.createElement("h3");
+        title.textContent = element.title;
+
         let subtitle = document.createElement("h4");
         subtitle.textContent = element.subtitle;
 
-        panel.appendChild(subtitle);
+        let titles = document.createElement("div");
+
+        titles.classList.add('titulos');
+        titles.appendChild(title);
+        titles.appendChild(subtitle);
+
+        let i = document.createElement("i");
+        i.classList.add('fas', 'fa-chevron-down')
+        
+        panelTitle.classList.add('accordion');
+        
+        panelTitle.appendChild(titles);
+        panelTitle.appendChild(i);
+        
+
+        accordion.appendChild(panelTitle);
+        
+
+        let panel = document.createElement("div");
+        panel.classList.add('accordion-content');
         panel.innerHTML += element.content;
 
         accordion.appendChild(panel);
@@ -49,9 +67,11 @@ class Accordion {
         if (content.style.maxHeight) {
           // accordion is currently open, so close it
           content.style.maxHeight = null;
+          content.style.marginTop = 0 + "px";
         } else {
           // accordion is currently closed, so open it
           content.style.maxHeight = content.scrollHeight + "px";
+          content.style.marginTop = 30 + "px";
         }
       }); 
     }
