@@ -5,12 +5,13 @@
 }
 
 div.accordion {
-  width: 100%;
-  background-color: whitesmoke;
-  border: none;
+  background-color: white;
+  border-bottom: 1px solid #e4e6e5;
+  min-height: 50px;
+  max-height: 70px;
   outline: none;
   text-align: left;
-  padding: 15px 20px;
+  padding: 15px 25px;
   font-size: 18px;
   color: #444;
   cursor: pointer;
@@ -29,6 +30,30 @@ div.accordion {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e4e6e5;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 25px;
+}
+
+div.title-container h2 {
+  margin: 0px;
 }
 
 div.titulos h3, div.titulos h4 {
@@ -48,8 +73,7 @@ div.accordion.is-open i {
   transition: all 300ms ease-in 0s;
 }
 
-div.accordion:hover,
-div.accordion.is-open {
+div.accordion:hover {
   background-color: #ddd;
 }
 
@@ -65,12 +89,12 @@ div.accordion.is-open {
 
 .accordion-content {
   background-color: white;
-  border-left: 1px solid whitesmoke;
-  border-right: 1px solid whitesmoke;
-  padding: 0 20px;
+  padding: 0 25px;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-in-out;
   transition: max-height 0.2s ease-in-out;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=accordion.css.map */

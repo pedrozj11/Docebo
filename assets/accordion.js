@@ -11,7 +11,7 @@ class Accordion {
     const accordion = document.querySelector('#' + this.options.container);
 
     const title = document.createElement("div");
-    title.innerHTML = '<h2>' + this.options.mainTitle + '</h2>';
+    title.innerHTML = '<div class="title-container"><h2>' + this.options.mainTitle + '</div></h2>';
 
     accordion.appendChild(title);
     //create accordion
@@ -67,11 +67,17 @@ class Accordion {
         if (content.style.maxHeight) {
           // accordion is currently open, so close it
           content.style.maxHeight = null;
-          content.style.marginTop = 0 + "px";
+          this.style.marginTop = 0 + "px";
+          this.style.transition = "all 0.2s ease-in-out"
+          content.style.marginBottom = 0 + "px";
+          content.style.transition = "all 0.2s ease-in-out"
         } else {
           // accordion is currently closed, so open it
           content.style.maxHeight = content.scrollHeight + "px";
-          content.style.marginTop = 30 + "px";
+          this.style.marginTop = 30 + "px";
+          this.style.transition = "all 0.2s ease-in-out"
+          content.style.marginBottom = 30 + "px";
+          content.style.transition = "all 0.2s ease-in-out"
         }
       }); 
     }
