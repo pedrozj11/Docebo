@@ -32,7 +32,7 @@ class Accordion {
 
         let title = document.createElement("h3");
         title.textContent = element.title;
-
+        
         let subtitle = document.createElement("h4");
         subtitle.textContent = element.subtitle;
 
@@ -40,7 +40,11 @@ class Accordion {
 
         titles.classList.add('titulos');
         titles.appendChild(title);
-        titles.appendChild(subtitle);
+        console.log(subtitle);
+        if(subtitle.textContent != '') {
+
+            titles.appendChild(subtitle);
+        }
 
         let i = document.createElement("i");
         i.classList.add('fas', 'fa-chevron-down')
