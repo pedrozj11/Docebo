@@ -35,7 +35,7 @@ class Accordion {
         let i = document.createElement("i");
         i.classList.add('fas', 'fa-chevron-down')
         
-        panelTitle.classList.add('accordion');
+        panelTitle.classList.add('accordion-header');
         
         panelTitle.appendChild(titles);
         panelTitle.appendChild(i);
@@ -57,7 +57,7 @@ class Accordion {
 
   slide(accordion) {
      
-    let accordions = accordion.getElementsByClassName("accordion");
+    let accordions = accordion.getElementsByClassName("accordion-header");
     for (let i = 0; i < accordions.length; i++) {
    
       accordions[i].addEventListener("click", function() {
