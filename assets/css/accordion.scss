@@ -73,8 +73,9 @@ div.titulos h4 {
 }
 
 div.accordion-header i {
-  font-size: 14px;
+  font-size: 26px;
   // float: right;
+  color: #0465ac;
   transition: all 300ms ease-in 0s;
 }
 
@@ -104,4 +105,7 @@ div.accordion-header:hover{
   font-size: 13px;
   color: #333;
 
+  p {
+      margin: 25px 0;
+  }
 }
