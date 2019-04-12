@@ -8,6 +8,9 @@ $size: 840px;
   }
 }
 
+
+// Main accordion container
+
 #my-accordion {
   width: 50%;
   min-width: 300px;
@@ -32,6 +35,9 @@ $size: 840px;
     grid-column-gap: 30px;
   }
 }
+
+
+// Header
 
 div.accordion-header {
   background-color: white;
@@ -123,6 +129,9 @@ div.accordion-header.is-open i {
 div.accordion-header:hover {
   background-color: #ddd;
 }
+
+
+// Accordion Content
 
 .accordion-content {
   background-color: white;

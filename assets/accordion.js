@@ -6,7 +6,12 @@ class Accordion {
     
   }
 
+
+  //function to create the accordion
+  
   build() {
+
+    // Creating Main Title
 
     const accordion = document.querySelector('#' + this.options.container);
 
@@ -14,8 +19,13 @@ class Accordion {
     title.innerHTML = '<div class="title-container"><h2>' + this.options.mainTitle + '</div></h2>';
 
     accordion.appendChild(title);
-    //create accordion
+
+    // Iterating every panel
+
     this.options.panels.forEach(element => {
+
+        
+        // Panel Title
 
         let panelTitle = document.createElement("div");
 
@@ -43,6 +53,7 @@ class Accordion {
 
         accordion.appendChild(panelTitle);
         
+        // Panel Content
 
         let panel = document.createElement("div");
         panel.classList.add('accordion-content');
@@ -55,9 +66,12 @@ class Accordion {
 
   }
 
+  // function to slide it when clicking 
+
   slide(accordion) {
      
     let accordions = accordion.getElementsByClassName("accordion-header");
+    
     for (let i = 0; i < accordions.length; i++) {
    
       accordions[i].addEventListener("click", function() {
