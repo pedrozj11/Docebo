@@ -40,7 +40,7 @@ class Accordion {
 
         titles.classList.add('titulos');
         titles.appendChild(title);
-        console.log(subtitle);
+        
         if(subtitle.textContent != '') {
 
             titles.appendChild(subtitle);
